@@ -96,10 +96,8 @@ workers()
 ```
 
     Hello World!
-          From worker 3:	Hello World!
-    
-
           From worker 2:	Hello World!
+          From worker 3:	Hello World!
     
 
 ### Simulation setup
@@ -120,22 +118,22 @@ input_values = collect(collect.(eachrow(rand(batchSize,2))))
 
 
     16-element Vector{Vector{Float64}}:
-     [0.9293457920921313, 0.402576116372966]
-     [0.12259134734034649, 0.7179386581182066]
-     [0.0943252136813455, 0.5899702018324732]
-     [0.8663069822825797, 0.746084003852257]
-     [0.356068251604996, 0.23273698706839285]
-     [0.5862786539205335, 0.2690817433781445]
-     [0.9157317876486707, 0.8088371088506633]
-     [0.1474287777108576, 0.6200899872997935]
-     [0.3827716762542702, 0.5092584410668642]
-     [0.3991691214391897, 0.5471853281812993]
-     [0.6228151638578469, 0.7174572971417849]
-     [0.2276767909173708, 0.650923059680724]
-     [0.2407006466766225, 0.7062158918043433]
-     [0.08067005382484049, 0.38487092625255936]
-     [0.7293256191148918, 0.6150534212347081]
-     [0.6484325935206493, 0.1667546653845573]
+     [0.31370753616565106, 0.5677033995043232]
+     [0.9119680863224477, 0.6102019951019838]
+     [0.4565789742285421, 0.9974367458290544]
+     [0.029014037532767545, 0.882800755047848]
+     [0.16476101122511055, 0.34335101561949843]
+     [0.6998922006413412, 0.16704404286692554]
+     [0.536947449917662, 0.8278811071569171]
+     [0.284765888683821, 0.8239957646977913]
+     [0.61617241735091, 0.7167992574240977]
+     [0.6753056379233328, 0.0989598482863614]
+     [0.22574974115635682, 0.805710744435462]
+     [0.05407307367761871, 0.23348557884833931]
+     [0.38298705415076517, 0.4024862377041738]
+     [0.4589791004123366, 0.5641124624714056]
+     [0.19591637691940544, 0.31633072193683054]
+     [0.7708480353785765, 0.8710739891319083]
 
 
 
@@ -178,14 +176,14 @@ Running a single evaluation is pretty quick, therefore the speed can be better t
 
 
 
-    BenchmarkTools.Trial: 4 samples with 1 evaluation per sample.
-     Range (min … max):  1.437 s …   1.459 s  ┊ GC (min … max): 0.09% … 0.16%
-     Time  (median):     1.448 s              ┊ GC (median):    0.12%
-     Time  (mean ± σ):   1.448 s ± 12.329 ms  ┊ GC (mean ± σ):  0.31% ± 0.40%
+    BenchmarkTools.Trial: 3 samples with 1 evaluation per sample.
+     Range (min … max):  1.883 s …  1.893 s  ┊ GC (min … max): 0.35% … 0.05%
+     Time  (median):     1.891 s             ┊ GC (median):    0.35%
+     Time  (mean ± σ):   1.889 s ± 4.927 ms  ┊ GC (mean ± σ):  0.27% ± 0.19%
     
-      █                                                      ▁▁  
-      █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁██ ▁
-      1.44 s         Histogram: frequency by time        1.46 s <
+      █                                          █           █  
+      █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁█ ▁
+      1.88 s        Histogram: frequency by time        1.89 s <
     
      Memory estimate: 64.21 MiB, allocs estimate: 4201025.
 
@@ -207,7 +205,7 @@ println("Single Threaded")
 
 
     BenchmarkTools.Trial: 1 sample with 1 evaluation per sample.
-     Single result which took 23.210 s (0.12% GC) to evaluate,
+     Single result which took 30.483 s (0.08% GC) to evaluate,
      with a memory estimate of 1.00 GiB, over 67216388 allocations.
 
 
@@ -223,14 +221,16 @@ println("Multi Threaded")
 ```
 
     Multi Threaded
+
+    
     
 
 
 
 
     BenchmarkTools.Trial: 1 sample with 1 evaluation per sample.
-     Single result which took 12.147 s (0.00% GC) to evaluate,
-     with a memory estimate of 115.89 KiB, over 2065 allocations.
+     Single result which took 15.997 s (0.00% GC) to evaluate,
+     with a memory estimate of 124.58 KiB, over 2363 allocations.
 
 
 
