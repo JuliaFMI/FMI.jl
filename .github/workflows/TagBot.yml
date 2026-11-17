@@ -33,3 +33,44 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           # SSH deploy key, so the new tag triggers other workflows (e.g. Documentation)
           ssh: ${{ secrets.DOCUMENTER_KEY }}
+          # TagBot's default changelog template, except the heading reads
+          # "FMI.jl vX.Y.Z" instead of "FMI vX.Y.Z" ({{ package }} is the
+          # Project.toml name, without ".jl").
+          changelog: |
+            ## {{ package }}.jl {{ version }}
+            {% if yanked %}
+
+            :warning: **This release has been yanked from the registry.**
+            {% endif -%}
+            {% if previous_release %}
+
+            [Diff since {{ previous_release }}]({{ compare_url }})
+            {% endif %}
+
+            {% if custom %}
+            {{ custom }}
+            {% endif %}
+
+            {% if backport %}
+            This release has been identified as a backport.
+            Automated changelogs for backports tend to be wildly incorrect.
+            Therefore, the list of issues and pull requests is hidden.
+            <!--
+            {% endif %}
+            {% if pulls %}
+            **Merged pull requests:**
+            {% for pull in pulls %}
+            - {{ pull.title }} (#{{ pull.number }}) (@{{ pull.author.username }})
+            {% endfor %}
+            {% endif %}
+
+            {% if issues %}
+            **Closed issues:**
+            {% for issue in issues %}
+            - {{ issue.title }} (#{{ issue.number }})
+            {% endfor %}
+            {% endif %}
+
+            {% if backport %}
+            -->
+            {% endif %}
