@@ -148,3 +148,10 @@ setFctGetStringStatus
 ```
 
 The shorter model-description aliases `addStateAndDerivative`, `addInput`, `addOutput`, and `addParameter` are exported for convenience and map to the corresponding `addReal...` functions. The legacy `fmi2SetFct...` callback aliases are still exported for compatibility; new code should use the `setFct...` names above.
+
+### Version-independent names
+
+```@docs
+FMIExport.FMI2Symbols
+FMIExport.FMI2Symbols.setCapabilities!
+```
