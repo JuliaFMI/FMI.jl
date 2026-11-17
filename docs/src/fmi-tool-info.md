@@ -22,9 +22,9 @@ Detailed export information and automatically generated FMUs will be deployed so
 ## FMI-2.0
 | **File name** | **x86_64-windows** |  **x86_64-linux** | 
 | :--- | --- | --- |
-| BouncingBall | [ME](https://github.com/JuliaFMI/FMIExport.jl/tree/main/examples/FMI2/BouncingBall) | coming soon |
-| Manipulation | [ME](https://github.com/JuliaFMI/FMIExport.jl/tree/main/examples/FMI2/Manipulation) | coming soon |
-| NeuralFMU | [ME](https://github.com/JuliaFMI/FMIExport.jl/tree/main/examples/FMI2/NeuralFMU) | coming soon |
+| BouncingBall | [ME](https://github.com/JuliaFMI/FMIExport.jl/tree/main/examples/BouncingBall) | coming soon |
+| Manipulation | [ME](https://github.com/JuliaFMI/FMIExport.jl/tree/main/examples/Manipulation) | coming soon |
+| NeuralFMU | [ME](https://github.com/JuliaFMI/FMIExport.jl/tree/main/examples/NeuralFMU) | coming soon |
 
 ## Validation tools
 - [Dassault Dymola 2022X](https://www.3ds.com/products/catia/dymola)

@@ -8,6 +8,6 @@ FMIExport = "31b88311-cab6-44ed-ba9c-fe5a9abbd67a"
 FMIImport = "9fcbc62e-52a0-44e9-a616-1359a0008194"
 
 [compat]
-FMIExport = "0.6"
+FMIExport = "0.6, 1"
 FMIImport = "1.4.0"
 julia = "1.10"
