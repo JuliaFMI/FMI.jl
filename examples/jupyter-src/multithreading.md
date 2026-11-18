@@ -101,7 +101,7 @@ input_values = collect(collect.(eachrow(rand(batchSize,2))))
 
 
     1-element Vector{Vector{Float64}}:
-     [0.7251535932706178, 0.14675482327266276]
+     [0.4026367122967943, 0.8949856100942423]
 
 
 
@@ -153,13 +153,13 @@ Running a single evaluation is pretty quick, therefore the speed can be better t
 
 
     BenchmarkTools.Trial: 3 samples with 1 evaluation per sample.
-     Range (min … max):  1.806 s …   1.853 s  ┊ GC (min … max): 0.06% … 0.35%
-     Time  (median):     1.834 s              ┊ GC (median):    0.35%
-     Time  (mean ± σ):   1.831 s ± 23.597 ms  ┊ GC (mean ± σ):  0.27% ± 0.18%
+     Range (min … max):  1.831 s …  1.851 s  ┊ GC (min … max): 0.36% … 0.40%
+     Time  (median):     1.838 s             ┊ GC (median):    0.36%
+     Time  (mean ± σ):   1.840 s ± 9.994 ms  ┊ GC (mean ± σ):  0.27% ± 0.19%
     
-      █                                 █                     █  
-      █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█ ▁
-      1.81 s         Histogram: frequency by time        1.85 s <
+      █                 █                                    █  
+      █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█ ▁
+      1.83 s        Histogram: frequency by time        1.85 s <
     
      Memory estimate: 64.21 MiB, allocs estimate: 4201025.
 
@@ -181,13 +181,13 @@ println("Single Threaded")
 
 
     BenchmarkTools.Trial: 3 samples with 1 evaluation per sample.
-     Range (min … max):  1.827 s …  1.837 s  ┊ GC (min … max): 0.05% … 0.05%
-     Time  (median):     1.831 s             ┊ GC (median):    0.05%
-     Time  (mean ± σ):   1.831 s ± 5.085 ms  ┊ GC (mean ± σ):  0.06% ± 0.02%
+     Range (min … max):  1.830 s …  1.833 s  ┊ GC (min … max): 0.10% … 0.05%
+     Time  (median):     1.832 s             ┊ GC (median):    0.06%
+     Time  (mean ± σ):   1.832 s ± 1.930 ms  ┊ GC (mean ± σ):  0.07% ± 0.03%
     
-      █                   █                                  █  
-      █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█ ▁
-      1.83 s        Histogram: frequency by time        1.84 s <
+      █                                         █            █  
+      █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁█ ▁
+      1.83 s        Histogram: frequency by time        1.83 s <
     
      Memory estimate: 64.21 MiB, allocs estimate: 4201028.
 
@@ -210,12 +210,12 @@ println("Multi Threaded")
 
 
     BenchmarkTools.Trial: 3 samples with 1 evaluation per sample.
-     Range (min … max):  1.842 s …  1.850 s  ┊ GC (min … max): 0.05% … 0.05%
-     Time  (median):     1.845 s             ┊ GC (median):    0.05%
-     Time  (mean ± σ):   1.846 s ± 3.872 ms  ┊ GC (mean ± σ):  0.06% ± 0.03%
+     Range (min … max):  1.836 s …  1.847 s  ┊ GC (min … max): 0.05% … 0.10%
+     Time  (median):     1.837 s             ┊ GC (median):    0.05%
+     Time  (mean ± σ):   1.840 s ± 5.794 ms  ┊ GC (mean ± σ):  0.06% ± 0.03%
     
-      █                    █                                 █  
-      █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█ ▁
+      █    █                                                 █  
+      █▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█ ▁
       1.84 s        Histogram: frequency by time        1.85 s <
     
      Memory estimate: 64.21 MiB, allocs estimate: 4201043.
