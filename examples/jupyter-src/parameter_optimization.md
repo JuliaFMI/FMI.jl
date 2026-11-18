@@ -169,7 +169,7 @@ obj_before = objective(p) # not really good!
 
 
 
-    54.43227838824936
+    54.432278388249344
 
 
 
