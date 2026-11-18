@@ -137,7 +137,7 @@ c = fmi2Instantiate!(fmu; loggingOn=true)
 
     FMU:            IO
         InstanceName:   IO
-        Address:        Ptr{Nothing} @0x00000163f9d73ef0
+        Address:        Ptr{Nothing} @0x000001c6fd483de0
         State:          0
         Logging:        true
         FMU time:       -Inf
@@ -256,7 +256,7 @@ paramsVal = generateRandomNumbers()
 
 
 
-    (76.01732969914731, true, 92, "Random number 82.05696725203448!")
+    (35.109011211410824, false, 80, "Random number 99.21683972415462!")
 
 
 
@@ -320,11 +320,6 @@ simData = simulate(c, (tStart, tStop); recordValues=params[1:3], saveat=tSave,
                         instantiate=false, setup=false, freeInstance=false, terminate=false, reset=false)
 ```
 
-    Sim. CS-FMU ...   0%|█                                  |  ETA: N/A
-
-    Sim. CS-FMU ... 100%|███████████████████████████████████| Time: 0:00:01
-    
-
 
 
 
@@ -357,8 +352,8 @@ simData = simulate(c, (tStart, tStop); recordValues=params[1:3], saveat=tSave,
     	Save values: 0
     	Steps completed: 0
     Values [2]:
-    	0.0	(76.01732969914731, 1.0, 92.0)
-    	1.0	(76.01732969914731, 1.0, 92.0)
+    	0.0	(35.109011211410824, 0.0, 80.0)
+    	1.0	(35.109011211410824, 0.0, 80.0)
     Events [0]:
     
 
@@ -392,7 +387,7 @@ rndReal, rndBoolean, rndInteger, rndString = generateRandomNumbers()
 
 
 
-    (2.687683045834577, false, 68, "Random number 9.621999075592091!")
+    (68.82204955650158, true, 17, "Random number 82.29726265449355!")
 
 
 
@@ -478,8 +473,8 @@ simData = simulate(c, (tStart, tStop); recordValues=params[1:3], saveat=tSave,
     	Save values: 0
     	Steps completed: 0
     Values [2]:
-    	0.0	(2.687683045834577, 0.0, 68.0)
-    	1.0	(2.687683045834577, 0.0, 68.0)
+    	0.0	(68.82204955650158, 1.0, 17.0)
+    	1.0	(68.82204955650158, 1.0, 17.0)
     Events [0]:
     
 
