@@ -84,7 +84,7 @@ simData = simulate(fmu, (tStart, tStop); recordValues=vrs)
 
     Simulating ME-FMU ...   0%|█                            |  ETA: N/A
 
-    Simulating ME-FMU ... 100%|█████████████████████████████| Time: 0:00:19
+    Simulating ME-FMU ... 100%|█████████████████████████████| Time: 0:00:15
     
 
 
@@ -236,7 +236,7 @@ fmu.cGetReal = @cfunction(myGetReal!, fmi2Status,
 
 
 
-    Ptr{Nothing} @0x0000019c57c716e0
+    Ptr{Nothing} @0x00000159e98c0cb0
 
 
 
