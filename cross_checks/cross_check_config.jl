@@ -5,7 +5,8 @@
 
 #config
 const TOOL_ID = "FMI_jl"
-const TOOL_VERSION = "0.9.2"
+# the version of the FMI.jl package under test (read from its Project.toml), so the results folder always matches it
+const TOOL_VERSION = string(pkgversion(FMI))
 const FMI_CROSS_CHECK_REPO_NAME = "fmi-cross-check"
 const NRMSE_THRESHHOLD = 5
 const EXCLUDED_SYSTEMS = ["AMESim", "Test-FMUs", "SimulationX", "Silver"]

@@ -64,7 +64,7 @@ optional arguments:
 More parameters can be found under `.\cross_check_config.jl`.
 
 * TOOL_ID: Used for the results folder name in the fmi-cross-checks
-* TOOL_VERSION: Used for the results folder name in the fmi-cross-checks
+* TOOL_VERSION: Used for the results folder name in the fmi-cross-checks (set automatically to the version of the tested FMI.jl package)
 * FMI_CROSS_CHECK_REPO_NAME: Used to identify the fmi-cross-checks folder
 * NRMSE_THRESHHOLD: Used to identify successful FMUs
 * EXCLUDED_SYSTEMS: These fmi cross check systems are excluded from the fmi cross check run, because the have been unstable and caused the script to crash
