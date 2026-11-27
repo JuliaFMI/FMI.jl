@@ -7,7 +7,6 @@ using FMI
 using FMIZoo
 using Test
 using Aqua
-import Random
 
 using FMI.FMIImport
 using FMI.FMIImport.FMIBase
@@ -75,6 +74,10 @@ toolversions = [("Dymola", "2023x")] # ("SimulationX", "4.5.2")
                 piracies = false,
                 persistent_tasks = (tmax = 60,),
             )
+        end
+
+        @testset "Deprecated functions" begin
+            include("deprecated.jl")
         end
 
     elseif Sys.isapple()

@@ -4,8 +4,9 @@
 #
 
 function warnDeprecated(oldStr, newStr, additional = "")
+    # `maxlog` is counted per log id, which defaults to the call site (shared by all functions here)
     @warn "`$(oldStr)` is deprecated, use `$(newStr)` instead. $(additional)\n(this message is printed 3 times)." maxlog =
-        3
+        3 _id = Symbol("FMI_deprecated_", oldStr)
 end
 
 function fmi2Simulate(args...; kwargs...)
