@@ -143,7 +143,7 @@ dataCS = simulateCS(myFMU, (tStart, tStop); recordValues=vrs, saveat=tSave)
 
     Sim. CS-FMU ...   0%|█                                  |  ETA: N/A
 
-    Sim. CS-FMU ... 100%|███████████████████████████████████| Time: 0:00:01
+    Sim. CS-FMU ... 100%|███████████████████████████████████| Time: 0:00:02
     
 
 
@@ -205,7 +205,7 @@ dataME = simulateME(myFMU, (tStart, tStop); saveat=tSave)
 
     Simulating ME-FMU ...   0%|█                            |  ETA: N/A
 
-    Simulating ME-FMU ... 100%|█████████████████████████████| Time: 0:00:12
+    Simulating ME-FMU ... 100%|█████████████████████████████| Time: 0:00:17
     
 
 
