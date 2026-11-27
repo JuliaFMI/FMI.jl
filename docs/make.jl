@@ -201,7 +201,7 @@ my_makedocs() = makedocs(
             ],
         ]
         "API Index" => "index_library.md"
-        "FMI Tool Information" => "fmi-tool-info.md"
+        "FMI Compatibility Information" => "fmi-tool-info.md"
         "Related Publication" => "related.md"
         "Contents" => "contents.md"
         hide("Deprecated" => "deprecated.md")
